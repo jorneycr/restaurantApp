@@ -9,6 +9,7 @@ import DetallePlatillo from './views/DetallePlatillo';
 import Menu from './views/Menu';
 
 import FirebaseState from './context/firebase/firebaseState';
+import PedidoState from './context/pedidos/pedidosState';
 
 
 const Stack = createNativeStackNavigator();
@@ -16,6 +17,7 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <FirebaseState>
+      <PedidoState>
       <NavigationContainer>
       <Stack.Navigator screenOptions={{
         headerStyle: {
@@ -33,6 +35,7 @@ function App() {
         <Stack.Screen name="ResumenPedido" component={ResumenPedido} options={{title: "Resumen Pedido"}}/>
       </Stack.Navigator>
     </NavigationContainer>
+      </PedidoState>
     </FirebaseState>
   );
 }
