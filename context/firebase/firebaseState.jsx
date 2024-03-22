@@ -3,6 +3,7 @@ import React, { useReducer} from 'react';
 import firebase from '../../firebase/firebase';
 import firebaseReducer from './firebaseReducer';
 import FirebaseContex from './firebaseContext';
+import { OBTENER_PRODUCTOS_EXITO } from '../../types';
 
 const FirebaseState = (props) => {
     console.log(firebase);
@@ -47,7 +48,8 @@ const FirebaseState = (props) => {
         <FirebaseContex.Provider
             value={{
                 menu: state.menu,
-                firebase
+                firebase,
+                obtenerProductos
             }}
         >
             {props.children}

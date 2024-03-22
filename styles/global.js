@@ -5,11 +5,11 @@ const globalStyles = StyleSheet.create({
         flex: 1
     },
     contenido: {
-        marginHorizontal: '2.5%',
+        marginHorizontal: '13%',
         flex: 1,
     },
     boton: {
-        backgroundColor: '#FFDA00'
+        backgroundColor: '#FFDA00',
     },
     botonTexto: {
         textTransform: 'uppercase',
