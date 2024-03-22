@@ -13,7 +13,6 @@ const FirebaseState = (props) => {
     }
 
     const [state, dispatch] = useReducer(firebaseReducer, initialState);
-
         // Función que se ejecuta para traer los productos
     const obtenerProductos = () => {
 
@@ -30,16 +29,16 @@ const FirebaseState = (props) => {
                     ...doc.data()
                 }
             });
-
+            console.log('platillos',platillos);
             // Ordenar por categoria con lodash
-            platillos = _.sortBy(platillos, 'categoria');
+            // platillos = _.sortBy(platillos, 'categoria');
 
             // console.log(platillos)
 
             // Tenemos resultados de la base de datos
             dispatch({
                 type: OBTENER_PRODUCTOS_EXITO,
-                payload: platillos
+                // payload: platillos
             });
         }
     }

@@ -1,5 +1,5 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
     apiKey: "AIzaSyDblYL2ASnoIIkYcwaGe5g9jFfAI7uMNU4",
     authDomain: "restaurante-5c5f6.firebaseapp.com",
     databaseURL: "https://restaurante-5c5f6-default-rtdb.firebaseio.com",
