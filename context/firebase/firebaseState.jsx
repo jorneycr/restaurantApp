@@ -6,7 +6,6 @@ import FirebaseContex from './firebaseContext';
 import { OBTENER_PRODUCTOS_EXITO } from '../../types';
 
 const FirebaseState = (props) => {
-    console.log(firebase);
 
     const initialState = {
         menu: []
@@ -29,7 +28,7 @@ const FirebaseState = (props) => {
                     ...doc.data()
                 }
             });
-            console.log('platillos',platillos);
+            // console.log('platillos',platillos);
             // Ordenar por categoria con lodash
             // platillos = _.sortBy(platillos, 'categoria');
 
@@ -38,7 +37,7 @@ const FirebaseState = (props) => {
             // Tenemos resultados de la base de datos
             dispatch({
                 type: OBTENER_PRODUCTOS_EXITO,
-                // payload: platillos
+                payload: platillos
             });
         }
     }
